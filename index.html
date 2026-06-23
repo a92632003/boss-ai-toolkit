@@ -7,9 +7,16 @@
   <meta name="description" content="專為企業主打造的 AI 小工具集合，幫你快速做出更好的經營決策。" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+  <style>
+    /* ===== Reset ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== Page ===== */
     body {
       background: #f0f0f0;
       font-family: 'Noto Sans SC', sans-serif;
@@ -21,6 +28,7 @@
       padding: 2rem 1rem;
     }
 
+    /* ===== Card wrapper ===== */
     .tk-wrap {
       background: #ffffff;
       width: 100%;
@@ -29,58 +37,59 @@
       overflow: hidden;
     }
 
+    /* ===== Top divider ===== */
     .tk-divider {
       height: 4px;
       background: linear-gradient(90deg, #ffd53b 0%, #ffe75f 50%, #c4dbe3 100%);
     }
 
+    /* ===== Hero ===== */
     .tk-hero {
       background: #c4dbe3;
       padding: 2.5rem 2rem 2rem;
       position: relative;
       overflow: hidden;
     }
-
     .tk-hero::before {
       content: '';
       position: absolute;
-      right: -40px; top: -40px;
-      width: 200px; height: 200px;
+      right: -40px;
+      top: -40px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       background: #ffd53b;
       opacity: 0.25;
     }
-
     .tk-hero::after {
       content: '';
       position: absolute;
-      right: 60px; bottom: -60px;
-      width: 140px; height: 140px;
+      right: 60px;
+      bottom: -60px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       background: #ffe75f;
       opacity: 0.2;
     }
-
     .tk-logo-row {
       display: flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 0.75rem;
     }
-
     .tk-logo-dot {
-      width: 10px; height: 10px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background: #ffd53b;
     }
-
     .tk-eyebrow {
       font-size: 12px;
       font-weight: 500;
       color: #6e7374;
       letter-spacing: 0.08em;
     }
-
     .tk-title {
       font-family: 'Noto Serif SC', serif;
       font-weight: 900;
@@ -91,22 +100,21 @@
       position: relative;
       z-index: 1;
     }
-
     .tk-title span {
       position: relative;
       display: inline-block;
     }
-
     .tk-title span::after {
       content: '';
       position: absolute;
-      left: 0; bottom: 2px;
-      width: 100%; height: 6px;
+      left: 0;
+      bottom: 2px;
+      width: 100%;
+      height: 6px;
       background: #ffd53b;
       opacity: 0.6;
       z-index: -1;
     }
-
     .tk-subtitle {
       font-size: 13.5px;
       color: #6e7374;
@@ -115,10 +123,12 @@
       z-index: 1;
     }
 
+    /* ===== Body ===== */
     .tk-body {
       padding: 1.5rem 2rem 2rem;
     }
 
+    /* ===== Search ===== */
     .tk-search-row {
       display: flex;
       align-items: center;
@@ -128,13 +138,11 @@
       padding: 0 14px;
       margin-bottom: 1.25rem;
     }
-
     .tk-search-row i {
       color: #a1afbd;
       font-size: 17px;
       flex-shrink: 0;
     }
-
     .tk-search-row input {
       flex: 1;
       border: none;
@@ -145,21 +153,25 @@
       padding: 11px 0;
       outline: none;
     }
+    .tk-search-row input::placeholder {
+      color: #a1afbd;
+    }
 
-    .tk-search-row input::placeholder { color: #a1afbd; }
-
+    /* ===== Count label ===== */
     .tk-count {
       font-size: 12px;
       color: #a1afbd;
       margin-bottom: 0.75rem;
     }
 
+    /* ===== Tool grid ===== */
     .tk-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 12px;
     }
 
+    /* ===== Tool card ===== */
     .tk-card {
       background: #ffffff;
       border: 1px solid #f0f0f0;
@@ -170,25 +182,24 @@
       color: #3e3f3f;
       transition: border-color 0.15s, background 0.15s;
     }
-
     .tk-card:hover {
       border-color: #c4dbe3;
       background: #f8fcfd;
     }
-
     .tk-card:hover .tk-card-arrow {
       opacity: 1;
       transform: translateX(2px);
     }
-
     .tk-card-icon {
-      width: 44px; height: 44px;
+      width: 44px;
+      height: 44px;
       border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 20px;
       margin-bottom: 14px;
     }
-
     .tk-card-name {
       font-family: 'Noto Serif SC', serif;
       font-weight: 900;
@@ -199,7 +210,6 @@
       align-items: center;
       justify-content: space-between;
     }
-
     .tk-card-arrow {
       opacity: 0;
       transition: opacity 0.15s, transform 0.15s;
@@ -207,14 +217,12 @@
       color: #a1afbd;
       flex-shrink: 0;
     }
-
     .tk-card-desc {
       font-size: 12.5px;
       color: #6e7374;
       line-height: 1.6;
       margin-bottom: 12px;
     }
-
     .tk-card-tag {
       display: inline-block;
       font-size: 11px;
@@ -224,19 +232,23 @@
       color: #6e7374;
     }
 
+    /* ===== Empty state ===== */
     .tk-empty {
       text-align: center;
       padding: 3rem 1rem;
       color: #a1afbd;
       font-size: 13px;
     }
+    .tk-empty i {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-    .tk-empty i { font-size: 28px; display: block; margin-bottom: 8px; }
-
+    /* ===== Banner ===== */
     .tk-banner-wrap {
       padding: 0 2rem 2rem;
     }
-
     .tk-banner {
       display: block;
       border-radius: 12px;
@@ -244,22 +256,30 @@
       border: 1px solid #f0f0f0;
       transition: opacity 0.15s;
     }
-
-    .tk-banner:hover { opacity: 0.88; }
-
+    .tk-banner:hover {
+      opacity: 0.88;
+    }
     .tk-banner img {
       width: 100%;
       display: block;
     }
 
+    /* ===== Responsive ===== */
     @media (max-width: 480px) {
-      body { padding: 0; }
-      .tk-wrap { border-radius: 0; }
-      .tk-title { font-size: 1.8rem; }
+      body {
+        padding: 0;
+      }
+      .tk-wrap {
+        border-radius: 0;
+      }
+      .tk-title {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="tk-wrap">
     <div class="tk-divider"></div>
 
@@ -275,7 +295,13 @@
     <div class="tk-body">
       <div class="tk-search-row">
         <i class="ti ti-search" aria-hidden="true"></i>
-        <input type="text" id="searchInput" placeholder="搜尋工具名稱或功能…" aria-label="搜尋工具" oninput="filterTools()" />
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="搜尋工具名稱或功能…"
+          aria-label="搜尋工具"
+          oninput="filterTools()"
+        />
       </div>
       <div class="tk-count" id="countLabel">共 2 個工具</div>
       <div class="tk-grid" id="toolGrid"></div>
@@ -286,76 +312,100 @@
     </div>
 
     <div class="tk-banner-wrap">
-      <a class="tk-banner" href="https://lin.ee/5lGbNvA" target="_blank" rel="noopener noreferrer" aria-label="加入 LINE 官方帳號">
-        <img src="https://woow99.site-now.app/wp-content/uploads/2025/04/snimgLyQQ6m.webp" alt="加入 LINE 官方帳號" />
+      <a
+        class="tk-banner"
+        href="https://lin.ee/5lGbNvA"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="加入 LINE 官方帳號"
+      >
+        <img
+          src="https://woow99.site-now.app/wp-content/uploads/2025/04/snimgLyQQ6m.webp"
+          alt="加入 LINE 官方帳號"
+        />
       </a>
     </div>
   </div>
 
   <script>
-    const tools = [
+    /* ===== 工具資料 ===== */
+    var tools = [
       {
-        name: "損益兩平計算機",
-        desc: "輸入固定成本、變動成本率與廣告預算，算出損益兩平營業額與廣告最低 ROAS，掌握剛好不賠錢的門檻",
-        icon: "ti-scale",
-        iconBg: "#c4dbe3",
-        iconColor: "#3e3f3f",
-        tag: "財務分析",
-        url: "https://woow99.site-now.app/1531/",
-        keywords: ["損益", "兩平", "固定成本", "變動成本", "廣告", "ROAS", "貢獻邊際", "計算"]
+        name: '損益兩平計算機',
+        desc: '輸入固定成本、變動成本率與廣告預算，算出損益兩平營業額與廣告最低 ROAS，掌握剛好不賠錢的門檻',
+        icon: 'ti-scale',
+        iconBg: '#c4dbe3',
+        iconColor: '#3e3f3f',
+        tag: '財務分析',
+        url: 'https://woow99.site-now.app/1531/',
+        keywords: ['損益', '兩平', '固定成本', '變動成本', '廣告', 'ROAS', '貢獻邊際', '計算']
       },
       {
-        name: "營業額試算工具",
-        desc: "輸入各流量來源的每月流量、轉換率與客單價，一鍵試算預估月營業額與年營業額，找出最值得衝的渠道",
-        icon: "ti-chart-bar",
-        iconBg: "#ffd53b",
-        iconColor: "#3e3f3f",
-        tag: "營運規劃",
-        url: "https://woow99.site-now.app/2575/",
-        keywords: ["營業額", "試算", "流量", "轉換率", "客單價", "月營業額", "年營業額", "渠道"]
+        name: '營業額試算工具',
+        desc: '輸入各流量來源的每月流量、轉換率與客單價，一鍵試算預估月營業額與年營業額，找出最值得衝的渠道',
+        icon: 'ti-chart-bar',
+        iconBg: '#ffd53b',
+        iconColor: '#3e3f3f',
+        tag: '營運規劃',
+        url: 'https://woow99.site-now.app/2575/',
+        keywords: ['營業額', '試算', '流量', '轉換率', '客單價', '月營業額', '年營業額', '渠道']
       }
     ];
 
+    /* ===== 渲染工具卡片 ===== */
     function renderTools(list) {
-      const grid = document.getElementById("toolGrid");
-      const empty = document.getElementById("emptyState");
-      const count = document.getElementById("countLabel");
+      var grid = document.getElementById('toolGrid');
+      var empty = document.getElementById('emptyState');
+      var count = document.getElementById('countLabel');
+
       if (list.length === 0) {
-        grid.innerHTML = "";
-        empty.style.display = "block";
-        count.textContent = "找不到相符的工具";
+        grid.innerHTML = '';
+        empty.style.display = 'block';
+        count.textContent = '找不到相符的工具';
         return;
       }
-      empty.style.display = "none";
-      count.textContent = "共 " + list.length + " 個工具";
-      grid.innerHTML = list.map(t => `
-        <a class="tk-card" href="${t.url}" target="_blank" rel="noopener noreferrer">
-          <div class="tk-card-icon" style="background:${t.iconBg};">
-            <i class="ti ${t.icon}" style="color:${t.iconColor};" aria-hidden="true"></i>
-          </div>
-          <div class="tk-card-name">
-            ${t.name}
-            <i class="ti ti-arrow-right tk-card-arrow" aria-hidden="true"></i>
-          </div>
-          <p class="tk-card-desc">${t.desc}</p>
-          <span class="tk-card-tag">${t.tag}</span>
-        </a>
-      `).join("");
+
+      empty.style.display = 'none';
+      count.textContent = '共 ' + list.length + ' 個工具';
+
+      grid.innerHTML = list.map(function(t) {
+        return [
+          '<a class="tk-card" href="' + t.url + '" target="_blank" rel="noopener noreferrer">',
+            '<div class="tk-card-icon" style="background:' + t.iconBg + ';">',
+              '<i class="ti ' + t.icon + '" style="color:' + t.iconColor + ';" aria-hidden="true"></i>',
+            '</div>',
+            '<div class="tk-card-name">',
+              t.name,
+              '<i class="ti ti-arrow-right tk-card-arrow" aria-hidden="true"></i>',
+            '</div>',
+            '<p class="tk-card-desc">' + t.desc + '</p>',
+            '<span class="tk-card-tag">' + t.tag + '</span>',
+          '</a>'
+        ].join('');
+      }).join('');
     }
 
+    /* ===== 搜尋過濾 ===== */
     function filterTools() {
-      const q = document.getElementById("searchInput").value.trim().toLowerCase();
-      if (!q) { renderTools(tools); return; }
-      const filtered = tools.filter(t =>
-        t.name.includes(q) ||
-        t.desc.toLowerCase().includes(q) ||
-        t.tag.includes(q) ||
-        t.keywords.some(k => k.includes(q))
-      );
+      var q = document.getElementById('searchInput').value.trim().toLowerCase();
+      if (!q) {
+        renderTools(tools);
+        return;
+      }
+      var filtered = tools.filter(function(t) {
+        return (
+          t.name.includes(q) ||
+          t.desc.toLowerCase().includes(q) ||
+          t.tag.includes(q) ||
+          t.keywords.some(function(k) { return k.includes(q); })
+        );
+      });
       renderTools(filtered);
     }
 
+    /* ===== 初始化 ===== */
     renderTools(tools);
   </script>
+
 </body>
 </html>
