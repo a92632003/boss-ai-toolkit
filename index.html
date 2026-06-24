@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>老闆 AI 工具箱｜企業主專屬 AI 小工具集合</title>
   <meta name="description" content="專為企業主打造的 AI 小工具集合，幫你快速做出更好的經營決策。" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
   <style>
@@ -19,9 +19,10 @@
     /* ===== Page ===== */
     body {
       background: #ffffff;
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Sans TC', sans-serif;
       color: #3e3f3f;
       margin: 0;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* ===== Card wrapper ===== */
@@ -80,18 +81,20 @@
       background: #ffd53b;
     }
     .tk-eyebrow {
+      font-family: 'Outfit', sans-serif;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 600;
       color: #6e7374;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
     }
     .tk-title {
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Serif TC', serif;
       font-weight: 900;
-      font-size: 2.2rem;
+      font-size: clamp(2rem, 5vw, 3.2rem);
       color: #3e3f3f;
-      line-height: 1.25;
-      margin-bottom: 0.6rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
       position: relative;
       z-index: 1;
     }
@@ -103,15 +106,16 @@
       content: '';
       position: absolute;
       left: 0;
-      bottom: 2px;
+      bottom: 3px;
       width: 100%;
-      height: 6px;
+      height: 8px;
       background: #ffd53b;
-      opacity: 0.6;
+      opacity: 0.65;
       z-index: -1;
     }
     .tk-subtitle {
-      font-size: 13.5px;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: clamp(14px, 1.6vw, 16px);
       color: #6e7374;
       line-height: 1.6;
       position: relative;
@@ -142,7 +146,7 @@
       flex: 1;
       border: none;
       background: transparent;
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Sans TC', sans-serif;
       font-size: 14px;
       color: #3e3f3f;
       padding: 11px 0;
@@ -196,7 +200,7 @@
       margin-bottom: 1.25rem;
     }
     .tk-card-name {
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Serif TC', serif;
       font-weight: 900;
       font-size: 18px;
       color: #3e3f3f;
@@ -281,7 +285,7 @@
         <span class="tk-eyebrow">FOR 企業主</span>
       </div>
       <h1 class="tk-title">老闆 <span>AI 工具箱</span></h1>
-      <p class="tk-subtitle">專為企業主打造的 AI 小工具集合<br>幫你快速做出更好的經營決策</p>
+      <p class="tk-subtitle">專為企業主打造的 AI 小工具集合，幫你快速做出更好的經營決策</p>
     </div>
 
     <div class="tk-body">
